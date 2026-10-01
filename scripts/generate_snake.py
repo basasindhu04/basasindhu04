@@ -90,7 +90,7 @@ def get_contribution_data(username):
             weeks.append({"contributionDays": days})
         return {"totalContributions": 0, "weeks": weeks}
 
-def simulate_snake_game(weeks, max_steps=180):
+def simulate_snake_game(weeks, max_steps=140):
     COLS = len(weeks)
     ROWS = 7
     
@@ -177,18 +177,19 @@ def generate_clean_snake_svg(calendar_data, dark_mode=True):
     weeks = calendar_data.get("weeks", [])
     total_contributions = calendar_data.get("totalContributions", 0)
     
-    grid, color_grid, snake_history, eaten_history, active_days = simulate_snake_game(weeks, max_steps=150)
+    grid, color_grid, snake_history, eaten_history, active_days = simulate_snake_game(weeks, max_steps=140)
     
     COLS = len(weeks)
     ROWS = 7
     CELL_SIZE = 10
     CELL_GAP = 3
     MARGIN_X = 25
-    MARGIN_Y = 25
+    MARGIN_TOP = 40
+    MARGIN_BOTTOM = 20
     
     total_steps = len(snake_history)
-    step_dur = 0.16 # 160ms per step: smooth, calm, comfortable speed
-    total_duration = total_steps * step_dur
+    step_dur = 0.22 # Reduced speed: 220ms per step for smooth, comfortable observation
+    total_duration = round(total_steps * step_dur, 2)
     
     bg_color = "#0d1117" if dark_mode else "#ffffff"
     empty_cell_color = "#161b22" if dark_mode else "#ebedf0"
@@ -196,28 +197,31 @@ def generate_clean_snake_svg(calendar_data, dark_mode=True):
     snake_body_color = "#39d353" if dark_mode else "#2da44e"
     snake_tail_color = "#006d32" if dark_mode else "#4ac26b"
     border_color = "#30363d" if dark_mode else "#d0d7de"
+    text_color = "#c9d1d9" if dark_mode else "#24292f"
+    sub_color = "#8b949e" if dark_mode else "#57606a"
+    accent_color = "#00D2FF" if dark_mode else "#0969da"
+    green_accent = "#39d353" if dark_mode else "#2da44e"
     
     svg_width = MARGIN_X * 2 + COLS * (CELL_SIZE + CELL_GAP) - CELL_GAP
-    svg_height = MARGIN_Y * 2 + ROWS * (CELL_SIZE + CELL_GAP) - CELL_GAP
+    svg_height = MARGIN_TOP + ROWS * (CELL_SIZE + CELL_GAP) - CELL_GAP + MARGIN_BOTTOM
     
     # 1. Build grid cells
     cells_svg = []
     for c in range(COLS):
         for r in range(ROWS):
             x = MARGIN_X + c * (CELL_SIZE + CELL_GAP)
-            y = MARGIN_Y + r * (CELL_SIZE + CELL_GAP)
+            y = MARGIN_TOP + r * (CELL_SIZE + CELL_GAP)
             initial_color = color_grid[c][r]
             
             if (c, r) in eaten_history:
                 eaten_step = eaten_history[(c, r)]
                 eaten_time = round(eaten_step * step_dur, 2)
                 
-                # Cell stays its normal color until eaten, then subtly highlights and transitions to empty cell color
+                # Cell stays its normal color until eaten, then highlights and transitions to empty cell color
                 cell_xml = f"""
     <rect x="{x}" y="{y}" width="{CELL_SIZE}" height="{CELL_SIZE}" rx="2" fill="{initial_color}">
-      <animate attributeName="fill" to="#ffffff" begin="{eaten_time}s" dur="0.1s" fill="freeze" />
-      <animate attributeName="fill" to="{empty_cell_color}" begin="{round(eaten_time + 0.1, 2)}s" dur="0.15s" fill="freeze" />
-      <animate attributeName="opacity" values="1;1;0.9;1" begin="{eaten_time}s" dur="0.2s" fill="freeze" />
+      <animate attributeName="fill" to="#ffffff" begin="{eaten_time}s" dur="0.12s" fill="freeze" />
+      <animate attributeName="fill" to="{empty_cell_color}" begin="{round(eaten_time + 0.12, 2)}s" dur="0.2s" fill="freeze" />
     </rect>"""
             else:
                 cell_xml = f'<rect x="{x}" y="{y}" width="{CELL_SIZE}" height="{CELL_SIZE}" rx="2" fill="{initial_color}" />'
@@ -236,17 +240,15 @@ def generate_clean_snake_svg(calendar_data, dark_mode=True):
             if seg_idx < len(s):
                 c, r = s[seg_idx]
                 px = MARGIN_X + c * (CELL_SIZE + CELL_GAP)
-                py = MARGIN_Y + r * (CELL_SIZE + CELL_GAP)
+                py = MARGIN_TOP + r * (CELL_SIZE + CELL_GAP)
                 x_values.append(str(px))
                 y_values.append(str(py))
                 opacity_values.append("1")
             else:
-                # Segment not grown yet: hide it offscreen
                 x_values.append("-50")
                 y_values.append("-50")
                 opacity_values.append("0")
 
-        # Color: Head is cyan/blue accent, body is vibrant GitHub green, tail transitions cleanly
         if seg_idx == 0:
             fill_color = snake_head_color
             rx_val = "3"
@@ -272,10 +274,24 @@ def generate_clean_snake_svg(calendar_data, dark_mode=True):
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" viewBox="0 0 {svg_width} {svg_height}">
   <style>
     .bg {{ fill: {bg_color}; stroke: {border_color}; stroke-width: 1px; rx: 6px; }}
+    .title {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; fill: {text_color}; }}
+    .metric-label {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; fill: {sub_color}; }}
+    .metric-val {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; }}
   </style>
 
   <!-- Clean Background Container -->
   <rect class="bg" width="{svg_width}" height="{svg_height}" />
+
+  <!-- Integrated Header Bar with Dynamic Active Days & Contributions -->
+  <g transform="translate({MARGIN_X}, 22)">
+    <text class="title" x="0" y="0">Contribution Heatmap</text>
+    
+    <text class="metric-label" x="{svg_width - 250}" y="0">Active Days:</text>
+    <text class="metric-val" x="{svg_width - 180}" y="0" fill="{accent_color}">{active_days}</text>
+    
+    <text class="metric-label" x="{svg_width - 140}" y="0">Contributions:</text>
+    <text class="metric-val" x="{svg_width - 55}" y="0" fill="{green_accent}">{total_contributions}</text>
+  </g>
 
   <!-- Aligned GitHub Contribution Grid -->
   <g id="grid">
