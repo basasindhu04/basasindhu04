@@ -48,14 +48,8 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Snake Contribution Grid" src="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake-dark.svg" />
+    <img alt="GitHub Snake Contribution Grid" src="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake.svg" />
   </picture>
-  <br/><br/>
-  <p>
-    <img src="https://img.shields.io/badge/Active_Days-73-00D2FF?style=flat-square&labelColor=161b22" alt="Active Days" />
-    &nbsp;&nbsp;
-    <img src="https://img.shields.io/badge/Total_Contributions-895-39d353?style=flat-square&labelColor=161b22" alt="Contributions" />
-  </p>
 </div>
 
 ---
