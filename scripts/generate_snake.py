@@ -107,6 +107,7 @@ def build_snake_svg(calendar_data, dark_mode=True):
 
     # Process grid
     rects_xml = []
+    cell_counter = 0
     for w_idx, week in enumerate(weeks):
         days = week.get("contributionDays", [])
         for d_idx, day in enumerate(days):
@@ -117,24 +118,25 @@ def build_snake_svg(calendar_data, dark_mode=True):
             elif not dark_mode and color.lower() == "#161b22":
                 color = "#ebedf0"
                 
-            if cnt > 0:
-                active_days += 1
-                x = margin_x + w_idx * (cell_size + cell_gap)
-                y = margin_y + d_idx * (cell_size + cell_gap)
-                active_coords.append((x, y))
-            
             x = margin_x + w_idx * (cell_size + cell_gap)
             y = margin_y + d_idx * (cell_size + cell_gap)
-            
-            # Assign unique id for active cells to add subtle spark animation
+
+            if cnt > 0:
+                active_days += 1
+                active_coords.append((x, y))
+                cell_counter += 1
+                delay = (cell_counter % 12) * 0.2
+                class_attr = f'class="day-cell active-cell-glow" style="animation-delay: {delay:.1f}s;"'
+            else:
+                class_attr = 'class="day-cell"'
+
             cell_id = f"c_{w_idx}_{d_idx}"
             rects_xml.append(
-                f'<rect id="{cell_id}" class="day-cell" x="{x}" y="{y}" width="{cell_size}" height="{cell_size}" rx="2" fill="{color}" />'
+                f'<rect id="{cell_id}" {class_attr} x="{x}" y="{y}" width="{cell_size}" height="{cell_size}" rx="2" fill="{color}" />'
             )
 
-    # Compute path for snake across active coordinates or default snake path
-    if not active_coords:
-        # Default smooth serpentine path across grid
+    # Compute path for snake across active coordinates or serpentine path
+    if not active_coords or len(active_coords) < 3:
         path_points = []
         for w_idx in range(0, min(52, len(weeks)), 2):
             x1 = margin_x + w_idx * (cell_size + cell_gap) + 5
@@ -142,12 +144,10 @@ def build_snake_svg(calendar_data, dark_mode=True):
             path_points.append(f"M {x1} {margin_y + 5} L {x1} {margin_y + 6*(cell_size+cell_gap) + 5} L {x2} {margin_y + 6*(cell_size+cell_gap) + 5} L {x2} {margin_y + 5}")
         path_d = " ".join(path_points)
     else:
-        # Build path visiting active cells smoothly
         path_cmds = [f"M {active_coords[0][0]+5} {active_coords[0][1]+5}"]
         for (x, y) in active_coords[1:]:
             path_cmds.append(f"L {x+5} {y+5}")
-        # Loop back smoothly
-        path_cmds.append(f"Z")
+        path_cmds.append("Z")
         path_d = " ".join(path_cmds)
 
     bg_color = "#0d1117" if dark_mode else "#ffffff"
@@ -163,15 +163,15 @@ def build_snake_svg(calendar_data, dark_mode=True):
     .title {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: {text_color}; }}
     .stat-label {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 11px; fill: {sub_color}; }}
     .stat-value {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; fill: {accent_color}; }}
-    .day-cell {{ transition: filter 0.3s ease, opacity 0.3s ease; }}
+    .day-cell {{ transition: filter 0.3s ease, transform 0.3s ease; }}
     
-    /* Subtle spark glow animation on contribution cells when snake passes */
-    @keyframes spark-glow {{
-      0% {{ filter: none; }}
-      50% {{ filter: drop-shadow(0px 0px 5px {snake_head_color}) brightness(1.4); }}
-      100% {{ filter: none; }}
+    /* Subtle spark glow animation on contribution cells as snake passes */
+    @keyframes spark-pulse {{
+      0% {{ filter: none; opacity: 0.9; }}
+      50% {{ filter: drop-shadow(0px 0px 4px {snake_head_color}) brightness(1.3); opacity: 1; }}
+      100% {{ filter: none; opacity: 0.9; }}
     }}
-    .active-spark {{ animation: spark-glow 1.5s ease-in-out infinite; }}
+    .active-cell-glow {{ animation: spark-pulse 2.4s ease-in-out infinite; }}
   </style>
 
   <!-- Background -->
@@ -188,7 +188,7 @@ def build_snake_svg(calendar_data, dark_mode=True):
     <text class="stat-value" x="705" y="0">{total_contributions}</text>
   </g>
 
-  <!-- Contribution Grid -->
+  <!-- Contribution Grid (Cells remain fully visible) -->
   <g>
     {"".join(rects_xml)}
   </g>
@@ -196,35 +196,35 @@ def build_snake_svg(calendar_data, dark_mode=True):
   <!-- Smooth Motion Path for Snake -->
   <path id="snake-path" d="{path_d}" fill="none" stroke="none" />
 
-  <!-- Constant-size Snake Traveling Smoothly (5 fixed segments, zero growth/shrinkage) -->
+  <!-- Constant-size Snake (5 fixed segments, constant size/length, smooth calm speed) -->
   <g id="snake">
-    <!-- Snake Body Segment 4 -->
+    <!-- Body Segment 4 -->
     <circle r="4" fill="{snake_body_color}" opacity="0.4">
-      <animateMotion dur="22s" repeatCount="indefinite" begin="-1.2s">
+      <animateMotion dur="24s" repeatCount="indefinite" begin="-1.2s">
         <mpath href="#snake-path" />
       </animateMotion>
     </circle>
-    <!-- Snake Body Segment 3 -->
+    <!-- Body Segment 3 -->
     <circle r="4.5" fill="{snake_body_color}" opacity="0.6">
-      <animateMotion dur="22s" repeatCount="indefinite" begin="-0.9s">
+      <animateMotion dur="24s" repeatCount="indefinite" begin="-0.9s">
         <mpath href="#snake-path" />
       </animateMotion>
     </circle>
-    <!-- Snake Body Segment 2 -->
+    <!-- Body Segment 2 -->
     <circle r="5" fill="{snake_body_color}" opacity="0.8">
-      <animateMotion dur="22s" repeatCount="indefinite" begin="-0.6s">
+      <animateMotion dur="24s" repeatCount="indefinite" begin="-0.6s">
         <mpath href="#snake-path" />
       </animateMotion>
     </circle>
-    <!-- Snake Body Segment 1 -->
+    <!-- Body Segment 1 -->
     <circle r="5.5" fill="{snake_head_color}" opacity="0.9">
-      <animateMotion dur="22s" repeatCount="indefinite" begin="-0.3s">
+      <animateMotion dur="24s" repeatCount="indefinite" begin="-0.3s">
         <mpath href="#snake-path" />
       </animateMotion>
     </circle>
-    <!-- Snake Head (Constant size, leading position) -->
+    <!-- Snake Head (Leading position) -->
     <circle r="6" fill="{snake_head_color}">
-      <animateMotion dur="22s" repeatCount="indefinite" begin="0s">
+      <animateMotion dur="24s" repeatCount="indefinite" begin="0s">
         <mpath href="#snake-path" />
       </animateMotion>
     </circle>
