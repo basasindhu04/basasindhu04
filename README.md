@@ -1,126 +1,64 @@
 <div align="center">
 
-  <!-- Header Typing Banner -->
-  <a href="https://github.com/basasindhu04">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00D2FF&center=true&vCenter=true&random=false&width=750&height=60&lines=Hi+%F0%9F%90%8B%2C+I'm+Basa+Sindhu+Latha!;Software+Development+Engineer+Candidate;Java+%26+Backend+Microservices+Developer;AI+%26+LLM+Integrations+Engineer;Full-Stack+Web+Developer" alt="Typing SVG" />
+# Basa Sindhu Latha
+
+<a href="https://github.com/basasindhu04">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00D2FF&center=true&vCenter=true&random=false&width=750&height=60&lines=Hi%2C+I'm+Basa+Sindhu+Latha!;Software+Development+Engineer+Candidate;Java+%26+Backend+Microservices+Developer;AI+%26+LLM+Integrations+Engineer;Full-Stack+Web+Developer" alt="Typing SVG" />
+</a>
+
+<p align="center">
+  <b>Computer Science Student | Java Developer | DSA Enthusiast | Aspiring Software Development Engineer</b>
+</p>
+
+<p align="center">
+  <a href="https://github.com/basasindhu04"><img src="https://img.shields.io/github/followers/basasindhu04?style=for-the-badge&logo=github&color=0d1117&labelColor=161b22" alt="Followers"/></a>
+  <a href="https://github.com/basasindhu04?tab=repositories"><img src="https://img.shields.io/github/stars/basasindhu04?style=for-the-badge&logo=github&color=0d1117&labelColor=161b22" alt="Stars"/></a>
+  <a href="https://komarev.com/ghpvc/?username=basasindhu04&style=for-the-badge&color=00b4d8&label=PROFILE+VIEWS"><img src="https://komarev.com/ghpvc/?username=basasindhu04&style=for-the-badge&color=00b4d8&label=PROFILE+VIEWS" alt="Profile Views"/></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/basasindhu04" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
   </a>
-
-  <p align="center">
-    <b>Computer Science Student • Java Developer • DSA Enthusiast • Aspiring Software Development Engineer</b>
-  </p>
-
-  <!-- Profile Quick Links & Visitor Badge -->
-  <p align="center">
-    <a href="https://github.com/basasindhu04"><img src="https://img.shields.io/github/followers/basasindhu04?style=for-the-badge&logo=github&color=0d1117&labelColor=161b22" alt="Followers"/></a>
-    <a href="https://github.com/basasindhu04?tab=repositories"><img src="https://img.shields.io/github/stars/basasindhu04?style=for-the-badge&logo=github&color=0d1117&labelColor=161b22" alt="Stars"/></a>
-    <a href="https://komarev.com/ghpvc/?username=basasindhu04&style=for-the-badge&color=00b4d8&label=PROFILE+VIEWS"><img src="https://komarev.com/ghpvc/?username=basasindhu04&style=for-the-badge&color=00b4d8&label=PROFILE+VIEWS" alt="Profile Views"/></a>
-  </p>
-
-  <!-- Contact & Social Badges -->
-  <p align="center">
-    <a href="https://github.com/basasindhu04" target="_blank">
-      <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
-    </a>
-    &nbsp;
-    <a href="https://www.linkedin.com/in/sindhulatha-basa" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-    </a>
-    &nbsp;
-    <a href="https://leetcode.com/u/Sindhu_04/" target="_blank">
-      <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode"/>
-    </a>
-    &nbsp;
-    <a href="https://www.codechef.com/users/basasindhu_04" target="_blank">
-      <img src="https://img.shields.io/badge/CodeChef-5B4638?style=flat-square&logo=codechef&logoColor=white" alt="CodeChef"/>
-    </a>
-    &nbsp;
-    <a href="mailto:basasindhu04@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/>
-    </a>
-  </p>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/sindhulatha-basa" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  &nbsp;
+  <a href="https://leetcode.com/u/Sindhu_04/" target="_blank">
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode"/>
+  </a>
+  &nbsp;
+  <a href="https://www.codechef.com/users/basasindhu_04" target="_blank">
+    <img src="https://img.shields.io/badge/CodeChef-5B4638?style=flat-square&logo=codechef&logoColor=white" alt="CodeChef"/>
+  </a>
+  &nbsp;
+  <a href="mailto:basasindhu04@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+</p>
 
 </div>
 
 ---
 
-### 👨‍💻 About Me
-
-```yaml
-candidate: Basa Sindhu Latha
-education: Computer Science & Engineering Student
-primary_language: Java ☕
-core_interests:
-  - Data Structures & Algorithms (DSA)
-  - Backend Development & Microservices Architecture
-  - Asynchronous & Event-Driven Distributed Systems
-  - AI / LLM Integrations & Full-Stack Web Development
-target_roles: Software Development Engineer (SDE) / Backend Engineer
-status: 🚀 Actively preparing for Software Engineering opportunities
-```
-
-- 🎯 **Engineering Focus**: Strong foundation in **Java**, object-oriented design, database optimization, and core computer science fundamentals.
-- ⚡ **Backend & Distributed Systems**: Experienced in constructing **asynchronous payment gateways**, **event-driven Saga pattern microservices (AWS SQS)**, and **Celery task worker queues**.
-- 🤖 **AI & Full-Stack Systems**: Experienced in integrating local LLMs (Meta Llama 3.2, LangChain, Ollama) and building responsive full-stack MERN applications.
-
----
-
-### 🚀 Featured Engineering Projects
+## GitHub Snake Dashboard
 
 <div align="center">
-  <p><i>Hand-picked projects demonstrating core Software Engineering, Backend Architecture, AI Inference, and Full-Stack Development.</i></p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub Snake Contribution Grid" src="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake-dark.svg" />
+  </picture>
 </div>
 
-#### 💳 1. Asynchronous Payment Gateway System
-> **Repository:** [`basasindhu04/async-payment-gateway`](https://github.com/basasindhu04/async-payment-gateway)  
-> **Key Technologies:** `Java` • `Redis Queues` • `Webhooks` • `HMAC SHA-256` • `Docker`  
-> **Engineering Focus:** Asynchronous Queue Workers • Idempotency Guarantee • Webhook Delivery Logs • API Authentication  
-> 
-> * **Description:** Industry-style payment gateway supporting Card & UPI processing. Utilizes Redis background worker queues for async transactions, HMAC-SHA256 signature verification for webhook delivery, hosted checkout integration, and strict API idempotency.
-
 ---
 
-#### ⚙️ 2. Event-Driven Order Processing Service (Saga Pattern)
-> **Repository:** [`basasindhu04/Build-an-Event-Driven-Order-Processing-Service-with-Saga-Pattern-using-AWS-SQS`](https://github.com/basasindhu04/Build-an-Event-Driven-Order-Processing-Service-with-Saga-Pattern-using-AWS-SQS)  
-> **Key Technologies:** `Python` • `AWS SQS` • `Saga Pattern` • `Microservices` • `Docker`  
-> **Engineering Focus:** Distributed Saga Transactions • Event-Driven Messaging • Fault Tolerance • Queueing  
-> 
-> * **Description:** Fault-tolerant order processing microservice system leveraging the Saga orchestration pattern and AWS SQS message queueing to manage distributed e-commerce transactions with eventual consistency.
-
----
-
-#### ⚡ 3. Asynchronous AI Inference Service
-> **Repository:** [`basasindhu04/Develop-Asynchronous-AI-Inference-Service-with-FastAPI-Celery-and-Docker`](https://github.com/basasindhu04/Develop-Asynchronous-AI-Inference-Service-with-FastAPI-Celery-and-Docker)  
-> **Key Technologies:** `Python` • `FastAPI` • `Celery` • `Redis` • `Docker`  
-> **Engineering Focus:** Async Task Delegation • Distributed Worker Pools • RESTful API Design • Containerization  
-> 
-> * **Description:** High-throughput AI inference platform built with FastAPI and Celery. Decouples HTTP request-response cycles from heavy model inference using Redis brokers and asynchronous worker nodes.
-
----
-
-#### 🤖 4. Offline E-Commerce Chatbot with Llama 3.2
-> **Repository:** [`basasindhu04/Offline-E-Commerce-Chatbot-with-Llama-3.2`](https://github.com/basasindhu04/Offline-E-Commerce-Chatbot-with-Llama-3.2)  
-> **Key Technologies:** `Python` • `Meta Llama 3.2` • `Ollama` • `LangChain`  
-> **Engineering Focus:** Local LLM Inference • Privacy-Preserving AI • Contextual State Management  
-> 
-> * **Description:** Privacy-first customer support chatbot serving Meta's Llama 3.2 (3B) model locally using Ollama and LangChain. Delivers zero API latency, zero subscription cost, and total data privacy.
-
----
-
-#### 🌐 5. Full-Stack MERN Event Platform
-> **Repository:** [`basasindhu04/MERN_STACK_EVENT_PROJECT`](https://github.com/basasindhu04/MERN_STACK_EVENT_PROJECT)  
-> **Live Demo:** 🚀 [https://mern-stack-event-project-psi.vercel.app](https://mern-stack-event-project-psi.vercel.app)  
-> **Key Technologies:** `MongoDB` • `Express.js` • `React` • `Node.js` • `Vercel`  
-> **Engineering Focus:** Full-Stack MERN Architecture • RESTful APIs • User Authorization • Cloud Deployment  
-> 
-> * **Description:** Production-ready event management web application featuring dynamic event creation, interactive discovery, authentication, responsive frontend UI, and cloud deployment on Vercel.
-
----
-
-### 🛠️ Tech Stack & Skillset
+## Tech Stack
 
 <div align="center">
 
-#### 💻 Programming Languages
+### Languages
 <p>
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=java,py,js,ts,cpp,c,html,css,solidity,dart&perline=10" alt="Languages" />
@@ -138,7 +76,7 @@ status: 🚀 Actively preparing for Software Engineering opportunities
 
 <br/>
 
-#### ⚙️ Backend, Cloud & Architecture
+### Backend
 <p>
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=java,spring,fastapi,django,nodejs,express,aws,postgres,redis,mongodb,docker&perline=11" alt="Backend" />
@@ -157,50 +95,56 @@ status: 🚀 Actively preparing for Software Engineering opportunities
 
 <br/>
 
-#### 🤖 AI, LLMs & Web Tools
+### Frontend
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,nextjs,git,github,vscode,postman,linux,docker,vercel&perline=9" alt="Tools" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,flutter,tailwind,bootstrap&perline=8" alt="Frontend" />
   </a>
 </p>
 <p>
-  <img src="https://img.shields.io/badge/Meta_Llama_3.2-0467DF?style=flat-square&logo=meta&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white"/>
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+</p>
+
+<br/>
+
+### Databases
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,mysql&perline=4" alt="Databases" />
+  </a>
+</p>
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+</p>
+
+<br/>
+
+### Tools
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,github,vscode,postman,linux,docker,vercel&perline=7" alt="Tools" />
+  </a>
+</p>
+<p>
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white"/>
 </p>
 
 </div>
 
 ---
 
-### 🧠 Currently Learning & Exploring
-
-- ☕ **Data Structures & Algorithms**: Advanced problem-solving in Java on LeetCode & CodeChef.
-- 🍃 **Java Spring Boot & Microservices**: Building production-ready REST services with Spring Data JPA and Hibernate.
-- 🏗️ **System Design & Distributed Systems**: Low-Level & High-Level design patterns, messaging queues, and caching strategies.
-- 🤖 **AI Agentic Workflows**: Multi-agent LLM orchestration and vector database search strategies.
-- 🐳 **Docker & Containerization**: Containerizing microservices and orchestrating multi-container environments.
-
----
-
-### 🧩 Coding Profiles
-
-<div align="center">
-
-| Platform | Profile Link | Focus Areas |
-| :--- | :--- | :--- |
-| 🟡 **LeetCode** | [`leetcode.com/u/Sindhu_04`](https://leetcode.com/u/Sindhu_04/) | Data Structures & Algorithms, Java Problem Solving |
-| 🟤 **CodeChef** | [`codechef.com/users/basasindhu_04`](https://www.codechef.com/users/basasindhu_04) | Competitive Programming, Dynamic Programming, Graph Algorithms |
-
-</div>
-
----
-
-### 📊 GitHub Analytics Dashboard
+## GitHub Analytics Dashboard
 
 <div align="center">
 
@@ -223,21 +167,41 @@ status: 🚀 Actively preparing for Software Engineering opportunities
 
 ---
 
-### 🐍 Contribution Activity Graph
+## Featured Projects
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Snake Contribution Grid" src="https://raw.githubusercontent.com/basasindhu04/basasindhu04/output/github-contribution-grid-snake.svg" />
-  </picture>
-</div>
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/basasindhu04/async-payment-gateway">async-payment-gateway</a></h3>
+      <p>Full-stack Java payment gateway supporting Card &amp; UPI processing. Built with Redis background worker queues, hosted checkout, HMAC-SHA256 webhook signatures, and API idempotency.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/basasindhu04/Build-an-Event-Driven-Order-Processing-Service-with-Saga-Pattern-using-AWS-SQS">AWS SQS Event-Driven Order Processing</a></h3>
+      <p>Fault-tolerant microservice system managing distributed e-commerce transactions using the Saga orchestration pattern and AWS SQS message queueing for eventual consistency.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/basasindhu04/Develop-Asynchronous-AI-Inference-Service-with-FastAPI-Celery-and-Docker">Async AI Inference Service</a></h3>
+      <p>High-throughput background AI model inference platform. Decouples REST API endpoints from heavy AI tasks using FastAPI, Celery task queues, Redis, and Docker containerization.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/basasindhu04/Offline-E-Commerce-Chatbot-with-Llama-3.2">Offline Chatbot with Llama 3.2</a></h3>
+      <p>Privacy-first customer support AI assistant serving Meta Llama 3.2 model locally via Ollama and LangChain. Delivers zero API latency, zero subscription cost, and total data privacy.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" width="100%" valign="top">
+      <h3><a href="https://github.com/basasindhu04/MERN_STACK_EVENT_PROJECT">MERN Stack Event Platform</a></h3>
+      <p>Production-ready full-stack event management web application featuring dynamic event discovery, JWT authentication, responsive React frontend, and cloud deployment on Vercel.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
 <div align="center">
 
-  <!-- Minimal Footer -->
   <p>
     <a href="https://github.com/basasindhu04"><img src="https://img.shields.io/badge/GitHub-basasindhu04-00D2FF?style=flat-square&logo=github&logoColor=white" alt="GitHub Profile"/></a>
     &nbsp;&bull;&nbsp;
@@ -247,6 +211,6 @@ status: 🚀 Actively preparing for Software Engineering opportunities
   </p>
 
   <sub><i>"Engineering scalable, resilient software systems with clean code and robust architecture."</i></sub><br/>
-  <sub>Thanks for visiting! </sub>
+  <sub>Thanks for visiting.</sub>
 
 </div>
